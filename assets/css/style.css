@@ -1,0 +1,303 @@
+@charset "utf-8";
+/*
+<!------------------------------------------------------------------ -->
+<!-- A Garry's Mod loading screen ~ It's universal for all GameModes -->
+<!-- Designed and Coded by DJShea (My first ever Website & Design) 	 -->
+<!-- You have permission to edit the code for the use of your server -->
+<!-- You do not have permission to redistribute for free or to sell. -->
+<!------------------------------------------------------------------ -->
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
+html {
+    height: 100%;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+/* Clearing some default browser settings */
+
+* {
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+a:active {
+    outline: none;
+}
+:focus {
+    -moz-outline-style: none;
+}
+.clear {
+    clear: both;
+}
+/* These parts can be easily changed to affect the design */
+
+body {
+    color: RGBA(225, 225, 225, 1);
+    font-family: "Lato", Arial, Helvetica, sans-serif;
+    background: url('../images/background.jpg');
+    background-size: 100% auto;
+    background-size: cover;
+}
+p {
+    text-align: justify;
+    font-size: 16px;
+}
+p a {
+    text-decoration: underline;
+    color: #CCC;
+}
+p a:hover {
+    text-decoration: none;
+    color: #FFF;
+}
+/* Core Wrapper which we vertically align */
+
+.core-wrapper {
+    width: 960px;
+    height: auto;
+}
+#left-items {
+    width: 470px;
+    height: auto;
+    float: left;
+}
+#middle-items {
+	float: none;
+    margin-top: 0;
+    text-align: center;
+}
+#right-items {
+    width: 470px;
+    height: auto;
+    float: right;
+}
+.left-box {
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin: 0 15px 0 0;
+    background: #dbdbdb;
+}
+#profile-wrap {
+    width: 465px;
+    float: left;
+    margin: 0px;
+}
+
+#profile-name p{
+	font-family: "Lato", Arial, Helvetica, sans-serif;
+	font-weight: 700;
+	font-size: 24px;
+	text-align: center;
+	margin: 17px 0 15px 75px;
+}
+
+#profile-wrap hr {
+  margin: 10px;
+  border: 0;
+  clear:both;
+  display:block;
+  width: 96%;               
+  background-color:#FFFFFF;
+  height: 1px;
+  max-width: 400px;
+}
+
+#profile-id p{
+	font-family: "Lato", Arial, Helvetica, sans-serif;
+	font-weight: 300;
+	font-size: 20px;
+	text-align: center;
+	margin: 17px 0 20px 75px;
+}
+
+
+#avatarimg {
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    overflow: hidden;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    display: block;
+    border: 2px solid #FFFFFF;
+}
+#avatarimg img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+.server {
+    margin: 20px 0 0 0;
+}
+
+#server-list {
+    width: 465px;
+    height: auto;
+}
+
+.item{
+	margin:8px;
+	height: auto;
+	width: 15%;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#server-list span {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    text-align: left;
+    font-size: 20px;
+     vertical-align: middle;
+    display: inline-block;
+	margin: 0 0 0 10px;
+
+}
+
+#server-list li {
+    background: url("../images/icon-bg.png") no-repeat;
+	background-size: 435px auto;
+    background-repeat: no-repeat;
+	list-style:none;
+	margin-bottom: 1px;
+}
+
+.title h2 {
+	text-align: center;
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
+    color: RGBA(225, 225, 225, 1);
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 70px;
+    text-indent: 25px;
+	margin-top: -10px;
+}
+
+.news-area hr {
+  margin: 10px 0 20px 70px;
+  border: 0;
+  clear:both;
+  display:block;
+  width: 70%;               
+  background-color:#FFFFFF;
+  height: 1px;
+}
+
+#news {
+    width: 465px;
+    height: auto;
+}
+
+#news span{
+	font-size: 18px;
+    text-decoration: none;
+	margin-left: 18px;
+	margin-right: 10px;
+}
+
+#news li {
+	margin-left: -8px;
+    width: 454px;
+    height: 42px;
+    line-height: 42px;
+    list-style: none;
+}
+
+#news li:nth-child(even) {
+    background: rgba(0, 0, 0, 0);
+}
+#news li:nth-child(odd) {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.copyright{
+	margin-top: 15px;
+	margin-left: 15px;
+	position: fixed;
+    top: 0;
+	opacity: 0.3;
+    filter: alpha(opacity=30); /* For IE8 and earlier */
+}
+
+.copyright p{
+	font-family: 'Lato', sans-serif;
+    font-weight: 400;
+	letter-spacing: 2px;
+    font-size: 8pt;
+    text-align: center;
+	text-transform: uppercase;
+}
+
+#download-item p {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 11pt;
+    text-align: center;
+}
+
+.profile {
+    padding: 8px;
+    border-radius: 8px 8px 8px 8px;
+    -moz-border-radius: 8px 8px 8px 8px;
+    -webkit-border-radius: 8px 8px 8px 8px;
+    border: 8px solid rgba(0, 0, 0, .6);
+    background: #1f1f1f;
+    background: url("http://api.thumbr.it/whitenoise-361x370.png?background=1f1f1fff&noise=626262&density=30&opacity=14");
+}
+
+.server {
+    padding: 8px;
+    border-radius: 8px 8px 8px 8px;
+    -moz-border-radius: 8px 8px 8px 8px;
+    -webkit-border-radius: 8px 8px 8px 8px;
+    border: 8px solid rgba(0, 0, 0, .6);
+    background: #1f1f1f;
+    background: url("http://api.thumbr.it/whitenoise-361x370.png?background=1f1f1fff&noise=626262&density=30&opacity=14");
+}
+
+
+
+.news-area {
+    padding: 8px;
+    border-radius: 8px 8px 8px 8px;
+    -moz-border-radius: 8px 8px 8px 8px;
+    -webkit-border-radius: 8px 8px 8px 8px;
+    border: 8px solid rgba(0, 0, 0, .6);
+    background: #1f1f1f;
+    background: url("http://api.thumbr.it/whitenoise-361x370.png?background=1f1f1fff&noise=626262&density=30&opacity=14");
+}
+
+.download-item {
+  position: absolute;
+  width: 400px;
+  left: 50%;
+  margin: -200px 0 0 -200px;
+
+
+
+	float: none;
+	text-align: center;
+	position: fixed; 
+	bottom: 15px;
+    padding: 10px;
+    border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    border: 2px solid rgba(0, 0, 0, .6);
+    background: #1f1f1f;
+    background: url("http://api.thumbr.it/whitenoise-361x370.png?background=1f1f1fff&noise=626262&density=30&opacity=14");
+	overflow: hidden;
+}
+
+.logo{
+	margin-top: -70px;
+	display: inline-block;
+	text-align: center;
+	height: 120px;
+	width: auto;
+}
